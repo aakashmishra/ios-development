@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9m0-56-1oJ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--filter-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="photofun" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="vS2-QH-3wH">
+                                <rect key="frame" x="381" y="72" width="208" height="476"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0202.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="W8x-Yr-SS8">
+                                <rect key="frame" x="0.0" y="32" width="610" height="535"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="W8x-Yr-SS8" secondAttribute="height" multiplier="122:107" id="kdh-t2-Wbh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W8x-Yr-SS8" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="32" id="0L0-OJ-f0U"/>
+                            <constraint firstItem="W8x-Yr-SS8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="Dyq-Xb-Vnz"/>
+                            <constraint firstAttribute="trailing" secondItem="W8x-Yr-SS8" secondAttribute="trailing" id="KmU-2j-Wya"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W8x-Yr-SS8" secondAttribute="trailing" constant="-26" id="RI0-OC-Dxs"/>
+                            <constraint firstItem="W8x-Yr-SS8" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="qRm-Ng-xSb"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="W8x-Yr-SS8" secondAttribute="bottom" constant="33" id="wBu-wz-Len"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="vS2-QH-3wH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="apply filter" id="orY-dy-WoR">
+                            <connections>
+                                <action selector="appyfilter:" destination="vXZ-lx-hvc" id="brd-cI-YOI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="choose photo " id="eLu-E1-yiy">
+                            <connections>
+                                <action selector="choosephoto:" destination="vXZ-lx-hvc" id="ite-q4-zjG"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem title="click photo" id="X40-ua-bIA">
+                            <connections>
+                                <action selector="clickphoto:" destination="vXZ-lx-hvc" id="iIa-65-Kiq"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" title="filter" id="pMf-50-blb"/>
+                    <connections>
+                        <outlet property="applyimage" destination="W8x-Yr-SS8" id="VP9-Vl-5ES"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BxL-8d-myb">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" toolbarHidden="NO" id="9m0-56-1oJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ekb-DH-5mD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="rfF-hz-Ynm">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="PhJ-hl-nj5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMz-cG-Ovf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="-380"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="IMG_0202.JPG" width="3264" height="2448"/>
+    </resources>
+</document>
